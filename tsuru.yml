@@ -1,0 +1,9 @@
+php:
+    frontend:
+        name: apache
+        options:
+            modules:
+                - rewrite
+
+    composer: true
+
