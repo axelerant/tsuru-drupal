@@ -10,6 +10,6 @@ php:
 hooks:
   build:
     - /home/application/current/vendor/bin/drush site-install standard --site-name=${TSURU_APPNAME} --account-pass=admin --db-url=mysql://$MYSQL_USER:$MYSQL_PASSWORD@$MYSQL_HOST:$MYSQL_PORT/$MYSQL_DATABASE_NAME --yes
-    - /home/application/current/vendor/bin/drush vset file_public_path /shared
+    - /home/application/current/vendor/bin/drush --root=/home/application/current vset file_public_path /shared
     - ln -s /shared /home/application/current/shared
 
