@@ -1,6 +1,6 @@
 php:
     frontend:
-        name: apache
+        name: apache-mod-php
         options:
             modules:
                 - rewrite
