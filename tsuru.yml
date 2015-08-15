@@ -2,7 +2,6 @@ php:
     frontend:
         name: apache-mod-php
         options:
-            vhost_file: vhost.conf
             modules:
                 - rewrite
 
@@ -11,5 +10,6 @@ php:
 hooks:
   build:
     - /home/application/current/vendor/bin/drush site-install standard --root=/home/application/current --site-name=${TSURU_APPNAME} --account-pass=admin --db-url=mysql://$MYSQL_USER:$MYSQL_PASSWORD@$MYSQL_HOST:$MYSQL_PORT/$MYSQL_DATABASE_NAME --yes
-    - ln -s /shared /home/application/current/shared
+    - ln -s /shared /home/application/current/sites/default/files
+
 
