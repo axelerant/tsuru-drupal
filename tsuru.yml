@@ -2,6 +2,7 @@ php:
     frontend:
         name: apache-mod-php
         options:
+            vhost_file: vhost.conf
             modules:
                 - rewrite
 
