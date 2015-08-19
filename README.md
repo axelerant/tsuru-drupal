@@ -1,7 +1,7 @@
 # Drupal 7 for Tsuru
 
 Though Tsuru is designed to run 12 factor-compatible stateless apps, it can run Drupal 7 without any hiccups.
-This version runs on a modified version of the PHP platform.
+This version runs on a slightly [modified version](https://github.com/axelerant/basebuilder) of the PHP platform.
 
 
 ## Prerequisites
@@ -152,7 +152,7 @@ Thanks to Tsuru's `sharedfs` configuration, `sites/default/files` gets stored in
 
 **Note** The `sites/default/files` directory is linked to `/shared` during deploy.
 
-1. If you are running a stock Tsuru setup, make the following changes to `/etc/tsuru/tsuru.conf` under the `docker` section.
+If you are running a stock Tsuru setup, make the following changes to `/etc/tsuru/tsuru.conf` under the `docker` section.
 
 ```
   sharedfs:
@@ -162,7 +162,7 @@ Thanks to Tsuru's `sharedfs` configuration, `sites/default/files` gets stored in
 
 ```
 
-2. Restart the API server for these changes to take effect
+Restart the API server for these changes to take effect
 
 ```
 $ sudo service tsuru-server-api restart
