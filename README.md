@@ -23,7 +23,7 @@ This version runs on a modified version of the PHP platform.
 ```
 $ tsuru-admin platform-add drupal -d https://raw.githubusercontent.com/axelerant/basebuilder/master/php/Dockerfile
 
-``
+```
 
 2. Create a MySQL service on `python` platform. Note that you need to have an RDS instance running.
 
